@@ -1,15 +1,45 @@
+- model: shop.promocode
+  pk: 1
+  fields:
+    code: GAMER
+    description: Открывает игровые ПК
+
+- model: shop.promocode
+  pk: 2
+  fields:
+    code: OFFICE
+    description: Открывает офисные ноутбуки
+
+- model: shop.promocode
+  pk: 3
+  fields:
+    code: ACCESS
+    description: Открывает аксессуары
+
 - model: shop.product
   pk: 1
   fields:
-    name: Стол
-    price: 2000
+    name: Базовый ноутбук
+    price: 50000
+    promo_code: null
+
 - model: shop.product
   pk: 2
   fields:
-    name: Стул
-    price: 1000
+    name: Офисный ноутбук Pro
+    price: 70000
+    promo_code: 2
+
 - model: shop.product
   pk: 3
   fields:
-    name: Табурет
-    price: 500
+    name: Игровой ПК Ultra
+    price: 150000
+    promo_code: 1
+
+- model: shop.product
+  pk: 4
+  fields:
+    name: Мышь геймерская
+    price: 5000
+    promo_code: 3
