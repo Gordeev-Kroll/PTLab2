@@ -6,6 +6,20 @@
 </head>
 <body>
     <div>
+        <h3>Магазин компьютеров</h3>
+        <form method="post" action="{% url 'apply_promo' %}">
+            {% csrf_token %}
+            <p>
+                <label for="id_code">Промокод:</label>
+                <input type="text" name="code" maxlength="20" id="id_code" />
+                <button type="submit">Применить</button>
+            </p>
+        </form>
+
+        {% if request.session.promo_code %}
+            <p>Промокод <strong>{{ request.session.promo_code }}</strong> применён. Доступны дополнительные товары.</p>
+        {% endif %}
+
         <h3>Список</h3>
         <table>
             <tr>
